@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe ForecastService do 
-  let(:service) { ForecastService.new }
+  let(:service) { ForecastService }
 
   describe '#get_forecast' do 
     it 'returns forecast' do 

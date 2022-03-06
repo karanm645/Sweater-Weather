@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe WeatherGeo do 
-  let(:details) { WeatherGeo.new({ city: "Denver", state: "Colorado", country: "US", lat: 39.7392364, lon: -104.9848623 })}
+  let(:details) { WeatherGeo.new({ lat: 39.7392364, lng: -104.9848623 })}
   
   describe 'initialize' do 
     it 'exists' do 
@@ -13,36 +13,15 @@ RSpec.describe WeatherGeo do
   end 
 
   describe "attributes" do 
-    it 'has a city' do 
-      actual = details.city
-      expected = "Denver"
-
-      expect(actual).to eq(expected)
-    end 
-
-    it 'has a state' do 
-      actual = details.state
-      expected = "Colorado"
-
-      expect(actual).to eq(expected)
-    end 
-
-    it 'has a country' do 
-      actual = details.country
-      expected = "US"
-
-      expect(actual).to eq(expected)
-    end 
-
-    it 'has a latitude' do 
-      actual = details.latitude
+    it 'has a lat' do 
+      actual = details.lat
       expected = 39.7392364
 
       expect(actual).to eq(expected)
     end 
 
-    it 'has a longitude' do 
-      actual = details.longitude
+    it 'has a long' do 
+      actual = details.long
       expected = -104.9848623
 
       expect(actual).to eq(expected)
