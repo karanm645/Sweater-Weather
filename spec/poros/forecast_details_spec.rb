@@ -2,9 +2,6 @@ require 'rails_helper'
 
 RSpec.describe Forecast do 
   describe 'initialize' do 
-    before :each do 
-      
-    end 
     it 'creates forecast details' do 
       response = File.read('test/fixtures/open_weather/forecast_details.json')  
       forecast_details = JSON.parse(response, symbolize_names: true) 
