@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe ForecastFacade do 
-  let(:facade) { ForecastFacade.new}
+  let(:facade) { ForecastFacade}
 
   describe '#forecast_details' do 
     it 'returns forecast_details from poros' do 

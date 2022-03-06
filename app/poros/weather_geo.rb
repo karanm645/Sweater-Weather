@@ -1,15 +1,9 @@
 class WeatherGeo
-  attr_reader :city,
-              :state,
-              :country,
-              :latitude,
-              :longitude 
+  attr_reader :lat,
+              :long
 
   def initialize(data)
-    @city = data[:city]
-    @state = data[:state]
-    @country = data[:country]
-    @latitude = data[:lat]
-    @longitude  = data[:lon]
+    @lat = data[:lat]
+    @long  = data[:lng]
   end 
 end 
