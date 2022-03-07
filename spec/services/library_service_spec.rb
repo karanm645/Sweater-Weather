@@ -5,7 +5,7 @@ RSpec.describe LibraryService do
 
   describe '#get_info' do 
     it 'returns library info' do 
-      library = service.get_info("denver,co")
+      library = service.get_info("denver,co", 2)
       expect(library).to be_an Hash 
     end 
   end 
