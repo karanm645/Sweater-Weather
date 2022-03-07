@@ -1,13 +1,11 @@
 class Library 
-  attr_reader :destination,
-              :forecast,
-              :total_books_found,
-              :books 
+  attr_reader :isbn,
+              :title,
+              :publisher 
 
   def initialize(data)
-    @destination = data[:destination]
-    @forecast = data[:forecast]
-    @total_books_found = data[:total_books_found]
-    @books = data[:books]
+    @isbn = data[:docs][0][:isbn]
+    @title = data[:docs][0][:title]
+    @publisher = data[:docs][0][:publisher]
   end 
 end 

@@ -1,6 +1,6 @@
 class GeoFacade 
   def self.geo_details(location)
-    WeatherGeo.new(service.get_geo(location)[:results][0][:locations][0][:latLng])
+    WeatherGeo.new(service.get_geo(location))
   end 
 
   def self.service 
