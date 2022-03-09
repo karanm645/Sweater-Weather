@@ -39,10 +39,10 @@ class Forecast
     end
   end
 
-    def detail_hourly_weather(specific)
+  def detail_hourly_weather(specific)
     specific.slice(0, 8).map do |hour|
       {
-        dt: Time.zone.at(hour[:dt]).to_s(:time),
+        dt: Time.zone.at(hour[:dt]).to_s(:time).to_i,
         temp: hour[:temp],
         description: hour[:weather][0][:description],
         icon: hour[:weather][0][:icon]
