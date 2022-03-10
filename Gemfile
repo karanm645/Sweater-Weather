@@ -23,7 +23,7 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-rails'
   gem 'shoulda-matchers', '~> 5.0'
-  
+  gem 'simplecov'
   gem 'vcr'
 end
 

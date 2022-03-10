@@ -11,7 +11,16 @@ RSpec.describe 'Picture API Endpoint' do
     end
 
     it 'returns the json response' do
-      forecast = JSON.parse(response.body, symbolize_names: true)
+      picture = JSON.parse(response.body, symbolize_names: true)
+      expect(picture[:data]).to be_a(Hash)
+      expect(picture[:data]).to have_key(:id)
+      expect(picture[:data]).to have_key(:type)
+      expect(picture[:data][:attributes]).to be_a(Hash)
+      expect(picture[:data][:attributes]).to have_key(:photo_info)
+      expect(picture[:data][:attributes][:photo_info]).to be_a(Hash)
+      expect(picture[:data][:attributes][:photo_info]).to have_key(:location)
+      expect(picture[:data][:attributes][:photo_info]).to have_key(:image_url)
+      expect(picture[:data][:attributes][:photo_info]).to have_key(:credit)
     end
   end
 end

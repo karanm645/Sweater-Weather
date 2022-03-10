@@ -13,19 +13,18 @@ RSpec.describe WeatherGeo do
   end 
 
   describe "attributes" do 
-    it 'has a lat' do 
+    it 'has a latitude' do 
       actual = details.lat
       expected = 39.7392364
 
       expect(actual).to eq(expected)
     end 
 
-    it 'has a long' do 
+    it 'has a longitude' do 
       actual = details.long
       expected = -104.9848623
 
       expect(actual).to eq(expected)
     end 
   end 
-
 end 
