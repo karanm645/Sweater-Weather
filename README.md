@@ -60,7 +60,7 @@ API: [faraday](https://github.com/lostisland/faraday), [figaro](https://github.c
   ```
   
 ## Endpoints 
-All endpoints can be viewed by running the `rails server` command in your terminal. In your browswer, type in `http://localhost:3000/{endpoint_get_request}` You can also view the response in [Postman](https://www.postman.com/). Below are details about each endpoint and the type of response you can expect. 
+All endpoints can be viewed by running the `rails server` command in your terminal. In your browswer, type in `http://localhost:3000/{endpoint_get_request}`
 
 | Request Type  | URI           |  
 | ------------- | ------------- |
