@@ -222,3 +222,102 @@ Response:
         }
     }
 }
+
+| Request  | URI           | Description  |
+| ------------- | ------------- | ------------ |
+| POST | /api/v1/users | A post request can be sent to the URI above. |
+
+Request:
+```ruby
+POST /api/v1/users
+
+{
+  "email": "6@example.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+```
+
+Response:
+```ruby 
+{
+    "data": {
+        "id": "328",
+        "type": "users",
+        "attributes": {
+            "email": "6@example.com",
+            "api_key": "756c74586cc0efda979ea3a3e06f3fd2"
+        }
+    }
+}
+```
+
+| Request  | URI           | Description  |
+| ------------- | ------------- | ------------ |
+| POST | /api/v1/sessions | A post request can be sent to the above URI. |
+
+Request: 
+```ruby
+POST /api/v1/sessions
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "6@example.com",
+  "password": "password"
+}
+```
+
+Response:
+```ruby
+{
+    "data": {
+        "id": "328",
+        "type": "users",
+        "attributes": {
+            "email": "6@example.com",
+            "api_key": "756c74586cc0efda979ea3a3e06f3fd2"
+        }
+    }
+}
+```
+
+| Request  | URI           | Description  |
+| ------------- | ------------- | ------------ |
+|POST | /api/v1/road_trip | A post request can be sent to the above uri, sending over an origin (ex. 'Boston, MA'), a destination (ex. 'Denver, CO'), and a valid api key in the body of the request. If the locations are able to be traversed via car, and the api key is valid, the response will send the destination and origin city, total travel time, and estimated weather upon arrival at destination city. Must include both origin and destination city and valid api key|
+
+Request: 
+```ruby
+POST /api/v1/road_trip
+
+body:
+
+{
+  "start_city": "denver,co",
+  "end_city": "pueblo,co",
+  "api_key": "756c74586cc0efda979ea3a3e06f3fd2"
+}
+```
+
+Response: 
+```ruby 
+{
+    "data": {
+        "id": null,
+        "type": "roadtrip",
+        "attributes": {
+            "start_city": "denver,co",
+            "end_city": "pueblo,co",
+            "travel_time": "02:34:44",
+            "weather_at_eta": {
+                "temperature": 21.1,
+                "conditions": "light snow"
+            }
+        }
+    }
+}
+```
+
+## Running the tests
+
+Run `bundle exec rspec` to run the test suite
