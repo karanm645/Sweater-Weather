@@ -73,8 +73,8 @@ All endpoints can be viewed by running the `rails server` command in your termin
 #### Application Landing Page
 | Request Type | URI           | Description  | 
 | ------------- | ------------- | ------------ | 
-| GET  |  /api/v1/forecast?location={location}  |Returns current forecast for given location. Location must be sent as 'city, state abbreviation' like 'Boston, MA' or 'New York, NY' | 
-| GET  |  /api/v1/backgrounds?location={location} | Returns url and details of a background image to display for given location. Location must be sent as 'city, state abbreviation' like 'Boston, MA' or 'New York, NY' |
+| GET  |  /api/v1/forecast?location={location}  |Returns current forecast for given location. Location must be sent as 'city, state abbreviation' | 
+| GET  |  /api/v1/backgrounds?location={location} | Returns url and details of a background image to display for given location. |
 
 Request: 
 ```ruby 
