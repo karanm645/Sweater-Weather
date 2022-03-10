@@ -204,7 +204,7 @@ Response:
 
 Request: 
 ```ruby 
-GET /api/v1/backgrounds?location=denver,co
+GET /api/v1/backgrounds?location=wynne,ar
 ```
 
 Response: 
