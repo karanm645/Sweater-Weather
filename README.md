@@ -13,9 +13,6 @@
       <ul>
         <li><a href="#important-gems">Important Gems</a></li>
       </ul>
-      <li>
-      <a href="#getting-started">Getting Started</a>
-    </li>
     <li><a href="#endpoints">Endpoints</a></li>
   </ol>
 </details>
