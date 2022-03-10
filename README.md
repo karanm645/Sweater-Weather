@@ -259,8 +259,6 @@ Response:
 Request: 
 ```ruby
 POST /api/v1/sessions
-Content-Type: application/json
-Accept: application/json
 
 {
   "email": "6@example.com",
