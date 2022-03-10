@@ -84,32 +84,141 @@ GET /api/v1/forecast?location=denver,co
 Response: 
 ```ruby 
 {
-  "data": {
-    "id": null,
-    "type": "forecast",
-    "attributes": {
-      "current_weather": {
-        "datetime": "2020-09-30 13:27:03 -0600",
-        "temperature": 79.4,
-        etc
-      },
-      "daily_weather": [
-        {
-          "date": "2020-10-01",
-          "sunrise": "2020-10-01 06:10:43 -0600",
-          etc
-        },
-        {...} etc
-      ],
-      "hourly_weather": [
-        {
-          "time": "14:00:00",
-          "conditions": "cloudy with a chance of meatballs",
-          etc
-        },
-        {...} etc
-      ]
+    "data": {
+        "id": null,
+        "type": "forecast",
+        "attributes": {
+            "current_weather": {
+                "datetime": "2022-03-10 02:03:05 UTC",
+                "sunrise": "12:22",
+                "sunset": "00:05",
+                "temperature": 279.94,
+                "feels_like": 277.75,
+                "humidity": 70,
+                "uvi": 0,
+                "visibility": 10000,
+                "description": "clear sky",
+                "icon": "01n"
+            },
+            "daily_weather": [
+                {
+                    "dt": "2022-03-09",
+                    "sunrise": "12:22",
+                    "sunset": "00:05",
+                    "max": 284.57,
+                    "min": 274.58,
+                    "description": "clear sky",
+                    "icon": "01d"
+                },
+                {
+                    "dt": "2022-03-10",
+                    "sunrise": "12:20",
+                    "sunset": "00:06",
+                    "max": 286.97,
+                    "min": 276.82,
+                    "description": "clear sky",
+                    "icon": "01d"
+                },
+                {
+                    "dt": "2022-03-11",
+                    "sunrise": "12:19",
+                    "sunset": "00:07",
+                    "max": 287.83,
+                    "min": 272.78,
+                    "description": "snow",
+                    "icon": "13d"
+                },
+                {
+                    "dt": "2022-03-12",
+                    "sunrise": "12:18",
+                    "sunset": "00:07",
+                    "max": 273.97,
+                    "min": 267.09,
+                    "description": "clear sky",
+                    "icon": "01d"
+                },
+                {
+                    "dt": "2022-03-13",
+                    "sunrise": "12:16",
+                    "sunset": "00:08",
+                    "max": 284.17,
+                    "min": 270.43,
+                    "description": "clear sky",
+                    "icon": "01d"
+                }
+            ],
+            "hourly_weather": [
+                {
+                    "dt": 2,
+                    "temp": 279.94,
+                    "description": "clear sky",
+                    "icon": "01n"
+                },
+                {
+                    "dt": 3,
+                    "temp": 279.86,
+                    "description": "clear sky",
+                    "icon": "01n"
+                },
+                {
+                    "dt": 4,
+                    "temp": 279.72,
+                    "description": "few clouds",
+                    "icon": "02n"
+                },
+                {
+                    "dt": 5,
+                    "temp": 279.37,
+                    "description": "scattered clouds",
+                    "icon": "03n"
+                },
+                {
+                    "dt": 6,
+                    "temp": 278.96,
+                    "description": "scattered clouds",
+                    "icon": "03n"
+                },
+                {
+                    "dt": 7,
+                    "temp": 278.62,
+                    "description": "overcast clouds",
+                    "icon": "04n"
+                },
+                {
+                    "dt": 8,
+                    "temp": 278.2,
+                    "description": "overcast clouds",
+                    "icon": "04n"
+                },
+                {
+                    "dt": 9,
+                    "temp": 277.97,
+                    "description": "overcast clouds",
+                    "icon": "04n"
+                }
+            ]
+        }
     }
-  }
 }
 ```
+
+Request: 
+```ruby 
+GET /api/v1/backgrounds?location=denver,co
+```
+
+Response: 
+```ruby 
+{
+    "data": {
+        "id": null,
+        "type": "image",
+        "attributes": {
+            "photo_info": {
+                "location": "wynne,arkansas",
+                "image_url": "https://www.pexels.com/photo/woman-sitting-on-edge-of-rock-formation-1202821/",
+                "credit": "Jordan Benton"
+            }
+        }
+    }
+}
