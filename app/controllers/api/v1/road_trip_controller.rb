@@ -1,7 +1,6 @@
 class Api::V1::RoadTripController < ApplicationController
   def create 
     user = User.find_by(api_key: params[:road_trip][:api_key])
-    binding.pry
     if user
       coordinates = GeoFacade.geo_details(params[:road_trip][:end_city])
       end_city_forecast = ForecastFacade.forecast_details(coordinates.lat, coordinates.long)
