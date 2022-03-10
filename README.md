@@ -79,8 +79,6 @@ All endpoints can be viewed by running the `rails server` command in your termin
 Request: 
 ```ruby 
 GET /api/v1/forecast?location=denver,co
-Content-Type: application/json
-Accept: application/json
 ``` 
 
 Response: 
