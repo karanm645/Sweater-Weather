@@ -223,9 +223,11 @@ Response:
     }
 }
 
+```
 | Request  | URI           | Description  |
 | ------------- | ------------- | ------------ |
 | POST | /api/v1/users | A post request can be sent to the URI above. |
+
 
 Request:
 ```ruby
