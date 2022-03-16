@@ -33,6 +33,7 @@ RSpec.describe 'User Endpoint' do
       post "/api/v1/users", params: fake_user
 
       result = JSON.parse(response.body, symbolize_names: true)
+    #error expectation
     end 
   end
 end 

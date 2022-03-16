@@ -21,14 +21,15 @@ class RoadTripSerializer
     time_at_destination = Time.now + road_trip.trip_info[:travel_time]
     integer_arrival = time_at_destination.utc.strftime('%H:%M').to_i
     x = end_city_forecast.hourly_weather.delete_if { |h| h[:dt] != integer_arrival}
-    (x[0][:temp]/ 0.55555556 - 459.67).round(1)
+    (x[-1][:temp]/ 0.55555556 - 459.67).round(1)
+    #find threshold (breaks at a certain)
   end 
 
   def self.description_at_destination(end_city_forecast, road_trip)
     time_at_destination = Time.now + road_trip.trip_info[:travel_time]
     integer_arrival = time_at_destination.utc.strftime('%H:%M').to_i
     x = end_city_forecast.hourly_weather.delete_if { |h| h[:dt] != integer_arrival}
-    x[0][:description]
+    x[-1][:description]
   end 
 
     def self.error(message)
